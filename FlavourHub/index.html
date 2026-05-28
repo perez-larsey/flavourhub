@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavourHub - Menu</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="FlavourHub home">Flavor<span>Hub</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <!-- Search Bar -->
+                <div>
+                    <input type="search" id="navSearchInput" placeholder="Search Meals">
+                    <button> Search </button>
+                </div>
+
+                 <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
+                <!-- Cart -->
+                <a href="cart.html" class="nav-cart">
+                    🛒
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+
+    </nav>     
+
+    <!-- HERO -->
+    <section class="hero">
+        <!-- Background video -->
+        <div class="hero-video-wrap">
+            <video autoplay muted loop playsinline>
+                <source src="media/bg-video.mp4" type="video/mp4">
+                <img src="" alt="">
+            </video>
+        </div>
+
+        <div class="hero-content">
+            <div>
+                Now delvering accross Accra & beyond
+            </div>
+
+            <h1>
+                Good Food <br>
+                <em>Great Vibes.</em>
+            </h1>
+
+            <p class="hero-sub">
+                FlavourHub connects you with the best restaurant in your area. 
+                Fresh meals, fast delivery, zero hasle.
+            </p>
+
+            <div>
+                <a href="menu.html" class="btn-primary">Browse Menu</a>
+                <a href="signup.html" class="btn-outline">Get Started </a>
+            </div>
+
+            <div class="hero-search">
+                <input type="search" placeholder="Search for Jollof, Pizza, Shawarma...">
+                <button> Find Food </button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

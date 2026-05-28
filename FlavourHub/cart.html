@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your FlavourHub cart — Review your order and checkout." />
+  <title>Cart — FlavourHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Flavour<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="signup.html">Sign Up</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-search" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="search" id="navSearchInput" placeholder="Search meals..." aria-label="Search meals" />
+          <button id="navSearchBtn" aria-label="Search">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+         <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="cart.html" class="nav-cart" aria-label="View cart" aria-current="page">🛒<span class="cart-badge" id="cartBadge" style="display:none">0</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="signup.html">Sign Up</a><a href="cart.html">🛒 Cart</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <main id="main-content">
+      <div class="section">
+        <div class="section-label" aria-hidden="true">🛒 Your Order</div>
+        <h1 class="section-title">Your Cart</h1>
+
+        <!-- Empty State -->
+        <div id="emptyCart" style="display:none; text-align:center; padding:80px 20px;">
+          <div style="font-size:5rem; margin-bottom:24px;" aria-hidden="true">🍽️</div>
+          <h2 style="font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--text-primary); margin-bottom:12px;">Your cart is empty</h2>
+          <p style="color:var(--text-muted); margin-bottom:32px; font-weight:300;">Looks like you haven't added anything yet.</p>
+          <a href="menu.html" class="btn btn-primary">Browse the Menu →</a>
+        </div>
+
+        <!-- Cart Content -->
+        <div id="cartContent" class="cart-layout">
+
+          <!-- Items -->
+          <div>
+            <div id="cartItems" role="list" aria-label="Cart items"></div>
+
+            <div style="margin-top:16px;">
+              <button onclick="clearCart()" style="background:none; border:1px solid var(--border); color:var(--text-muted); padding:10px 20px; border-radius:var(--radius-sm); cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.3s;" aria-label="Clear all items from cart">
+                🗑️ Clear Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="order-summary" aria-label="Order summary">
+            <div class="summary-title">Order Summary</div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="summarySubtotal">GHS 0</span>
+            </div>
+            <div class="summary-row">
+              <span>Delivery Fee</span>
+              <span>GHS 12</span>
+            </div>
+            <div class="summary-row">
+              <span>Service Charge</span>
+              <span>GHS 3</span>
+            </div>
+            <div class="summary-row">
+              <span>Total</span>
+              <span class="summary-total-amount" id="summaryTotal" aria-live="polite">GHS 0</span>
+            </div>
+
+            <div style="margin-top:24px;">
+              <div class="form-group">
+                <label class="form-label" for="promoCode">Promo Code</label>
+                <div style="display:flex; gap:8px;">
+                  <input class="form-input" type="text" id="promoCode" placeholder="e.g. FIRST20" aria-label="Enter promo code" />
+                  <button onclick="applyPromo()" style="background:var(--gold); color:var(--black); border:none; border-radius:var(--radius-sm); padding:0 16px; font-family:'DM Sans',sans-serif; font-weight:600; cursor:pointer; white-space:nowrap;" aria-label="Apply promo code">Apply</button>
+                </div>
+              </div>
+
+              <button class="btn btn-primary" style="width:100%; justify-content:center; margin-top:8px; font-size:1rem;" onclick="checkout()" aria-label="Proceed to checkout">
+                Checkout →
+              </button>
+              <a href="menu.html" style="display:block; text-align:center; margin-top:14px; color:var(--text-muted); font-size:0.88rem; text-decoration:none;">+ Add more items</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Checkout Success -->
+        <div id="checkoutSuccess" style="display:none; text-align:center; padding:80px 20px;">
+          <div style="font-size:5rem; margin-bottom:24px;" aria-hidden="true">✅</div>
+          <h2 style="font-family:'Playfair Display',serif; font-size:2rem; color:var(--text-primary); margin-bottom:12px;">Order Placed!</h2>
+          <p style="color:var(--text-muted); margin-bottom:8px; font-weight:300;">Your food is being prepared. Estimated delivery: <strong style="color:var(--gold);">25–35 minutes</strong>.</p>
+          <p style="color:var(--text-muted); margin-bottom:32px; font-weight:300;">Order #FH-<span id="orderNum"></span></p>
+          <a href="menu.html" class="btn btn-primary">Order Again →</a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div><div class="footer-brand">FlavourHub</div><p class="footer-desc">Ghana's favourite food delivery platform.</p></div>
+        <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li></ul></div>
+        <div><div class="footer-heading">Follow Us</div><ul class="footer-links"><li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li></ul></div>
+        <div><div class="footer-heading">Support</div><ul class="footer-links"><li><a href="contact.html">Help</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 FlavourHub Ghana</span></div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

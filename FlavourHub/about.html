@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About FlavourHub — Our story, mission, and the team behind Ghana's favourite food delivery platform." />
+  <title>About — FlavourHub</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Flavour<span>Hub</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html" class="active">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="signup.html">Sign Up</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="nav-search" role="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg><input type="search" id="navSearchInput" placeholder="Search meals..." aria-label="Search meals" />
+          <button id="navSearchBtn" aria-label="Search">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+        
+         <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="cart.html" class="nav-cart" aria-label="View cart">🛒<span class="cart-badge" id="cartBadge" style="display:none">0</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="signup.html">Sign Up</a><a href="cart.html">🛒 Cart</a>
+    </div>
+  </nav>
+
+  <div class="page-content">
+    <main id="main-content">
+
+      <!-- ABOUT HERO -->
+      <div class="about-hero" aria-labelledby="about-heading">
+        <div class="section-label" aria-hidden="true">✦ Our Story</div>
+        <h1 class="section-title" id="about-heading">Built for Food Lovers,<br>By Food Lovers</h1>
+        <p class="section-sub" style="margin: 0 auto; text-align:center; max-width:560px;">
+          FlavourHub was born in Accra with a simple belief: great food should reach you wherever you are,
+          fresh and fast. We connect passionate restaurants with hungry people across Ghana.
+        </p>
+      </div>
+
+      <!-- MISSION -->
+      <div class="section" aria-labelledby="mission-heading">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items:center;">
+          <div>
+            <div class="section-label" aria-hidden="true">🎯 Mission</div>
+            <h2 class="section-title" id="mission-heading">Why We Exist</h2>
+            <p style="color: var(--text-secondary); line-height:1.8; font-weight:300; margin-bottom:20px;">
+              Ghana's food culture is rich, diverse and deeply community-driven. From smoky jollof rice
+              to freshly grilled tilapia, we believe these flavours deserve to be accessible to everyone —
+              not just those near the restaurants.
+            </p>
+            <p style="color: var(--text-secondary); line-height:1.8; font-weight:300;">
+              FlavourHub bridges this gap: we work with local restaurant partners, pay our riders fairly,
+              and invest in technology that makes ordering as joyful as eating.
+            </p>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div class="step" style="text-align:left;">
+              <div class="step-icon" aria-hidden="true">🤝</div>
+              <h3>Fair to Partners</h3>
+              <p>We take lower commissions so restaurants can thrive.</p>
+            </div>
+            <div class="step" style="text-align:left;">
+              <div class="step-icon" aria-hidden="true">🚴</div>
+              <h3>Rider Welfare</h3>
+              <p>Our riders earn above-market rates with full insurance.</p>
+            </div>
+            <div class="step" style="text-align:left;">
+              <div class="step-icon" aria-hidden="true">🌱</div>
+              <h3>Eco Packaging</h3>
+              <p>Partnering with eco-friendly packaging suppliers across Accra.</p>
+            </div>
+            <div class="step" style="text-align:left;">
+              <div class="step-icon" aria-hidden="true">🔒</div>
+              <h3>Secure Payments</h3>
+              <p>Bank-grade security on every transaction. Always.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="stats-strip" aria-label="Company statistics">
+        <div class="stats-inner">
+          <div class="stat"><div class="stat-num">2021</div><div class="stat-label">Founded in Accra</div></div>
+          <div class="stat"><div class="stat-num">200+</div><div class="stat-label">Restaurant Partners</div></div>
+          <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Delivery Riders</div></div>
+          <div class="stat"><div class="stat-num">12</div><div class="stat-label">Cities Covered</div></div>
+        </div>
+      </div>
+
+      <!-- TEAM -->
+      <div class="section" aria-labelledby="team-heading">
+        <div class="section-label" aria-hidden="true">👥 The Team</div>
+        <h2 class="section-title" id="team-heading">Meet the People Behind FlavourHub</h2>
+        <div class="team-grid" role="list">
+
+          <div class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">PT</div>
+            <div class="team-name">Perez Tsakele-Larsey</div>
+            <div class="team-role">CEO & Co-Founder</div>
+          </div>
+
+          <div class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">AA</div>
+            <div class="team-name">Alvin Amarh</div>
+            <div class="team-role">CTO</div>
+          </div>
+
+          <div class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">CS</div>
+            <div class="team-name">Carl Sowah</div>
+            <div class="team-role">Head of Operations</div>
+          </div>
+
+          <div class="team-card" role="listitem">
+            <div class="team-avatar" aria-hidden="true">RA</div>
+            <div class="team-name">Robertson Addo-Appiah</div>
+            <div class="team-role">Head of Design</div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div><div class="footer-brand">FlavourHub</div><p class="footer-desc">Ghana's favourite food delivery platform.</p></div>
+        <div><div class="footer-heading">Explore</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><div class="footer-heading">Follow Us</div><ul class="footer-links"><li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a></li></ul></div>
+        <div><div class="footer-heading">Support</div><ul class="footer-links"><li><a href="contact.html">Help</a></li><li><a href="contact.html">Privacy</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 FlavourHub Ghana</span></div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
